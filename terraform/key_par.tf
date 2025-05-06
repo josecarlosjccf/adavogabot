@@ -3,8 +3,8 @@ resource "tls_private_key" "ec2_key" {
   rsa_bits  = 4096
 }
 
-resource "aws_key_pair" "sprint7_key" {
-  key_name   = "sprint7-key"
+resource "aws_key_pair" "advoga_key" {
+  key_name   = "advoga_key"
   public_key = tls_private_key.ec2_key.public_key_openssh
 }
 
